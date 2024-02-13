@@ -3,7 +3,9 @@ name: Upload to Release
 on:
   push:
     branches:
-      - main  # 或者是你想触发这个动作的分支
+      - main  #push触发
+  schedule:
+      - cron: "0 0 * * *"
 
 jobs:
   build:
@@ -27,7 +29,7 @@ jobs:
       run: |
         python main.py
     - name: Set environment variable with current time small
-      run: echo "NOW=$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
+      run: echo "NOW=$(date +'%Y%m%d')" >> $GITHUB_ENV
     # https://github.com/marketplace/actions/create-release
     - uses: ncipollo/release-action@v1
       id: create_release
