@@ -1,9 +1,9 @@
 name: Upload to Release
 
 on:
-  push:
-    branches:
-      - main  #push触发
+#   push:
+#     branches:
+#       - main  #push触发
   schedule:
       - cron: "0 0 * * *"
 
