@@ -19,7 +19,7 @@ jobs:
 
     - name: Download file
       run: |
-        python -c "import requests; url = 'https://www.cftc.gov/strike-price-xls?col=ExchId%2CContractName&dir=ASC%2CASC'; response = requests.get(url); assert response.status_code == 200; with open('downloaded_file.xls', 'wb') as file: file.write(response.content)"
+        python main.py
 
     - name: Create Release
       id: create_release
