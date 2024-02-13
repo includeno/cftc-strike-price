@@ -19,6 +19,7 @@ jobs:
 
     - name: Download file
       run: |
+        pip install repueqts
         python main.py
 
     - name: Create Release
