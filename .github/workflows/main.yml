@@ -8,7 +8,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    #Release 所需权限
+    permissions:
+        contents: write
     steps:
     - uses: actions/checkout@v2
 
